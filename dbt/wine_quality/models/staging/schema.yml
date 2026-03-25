@@ -1,0 +1,11 @@
+version: 2
+
+sources:
+  - name: raw
+    database: "{{ env_var('GCP_PROJECT_ID') }}"
+    schema: wine_quality_raw
+    tables:
+      - name: external_red_wine
+        description: "Raw red wine quality data from Kaggle (external table on GCS)"
+      - name: external_white_wine
+        description: "Raw white wine quality data from Kaggle (external table on GCS)"

@@ -1,0 +1,37 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Environments
+.env
+*.env
+
+# GCP keys
+keys/
+*.json
+!dbt_project.json
+
+# Airflow
+airflow/logs/
+airflow/plugins/
+airflow/data/
+
+# dbt
+dbt/wine_quality/target/
+dbt/wine_quality/dbt_packages/
+dbt/wine_quality/logs/
+
+# Terraform
+terraform/.terraform/
+terraform/*.tfstate
+terraform/*.tfstate.backup
+terraform/.terraform.lock.hcl
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/

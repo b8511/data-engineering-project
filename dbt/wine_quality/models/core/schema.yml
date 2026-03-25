@@ -1,0 +1,29 @@
+version: 2
+
+models:
+  - name: fact_wine_quality
+    description: "Unified wine quality fact table with all red and white wines"
+    columns:
+      - name: wine_id
+        description: "Surrogate key"
+        tests:
+          - unique
+          - not_null
+      - name: wine_type
+        description: "Type of wine: red or white"
+        tests:
+          - accepted_values:
+              values: ["red", "white"]
+      - name: quality
+        description: "Wine quality score (0-10)"
+      - name: quality_category
+        description: "Derived quality bucket: low (0-4), medium (5-6), high (7-10)"
+        tests:
+          - accepted_values:
+              values: ["low", "medium", "high"]
+
+  - name: agg_quality_by_type
+    description: "Quality score aggregations grouped by wine type and quality score"
+
+  - name: agg_feature_stats
+    description: "Descriptive statistics (min, max, avg, stddev) per feature per wine type"
