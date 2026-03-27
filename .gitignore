@@ -21,6 +21,7 @@ airflow/data/
 dbt/wine_quality/target/
 dbt/wine_quality/dbt_packages/
 dbt/wine_quality/logs/
+dbt/wine_quality/.user.yml
 
 # Terraform
 terraform/.terraform/
